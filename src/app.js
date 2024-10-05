@@ -1,4 +1,5 @@
-/* eslint-disable */
+// Puedes revisar mas estricto
+
 import "bootstrap";
 import "./style.css";
 
@@ -7,16 +8,25 @@ import "./assets/img/4geeks.ico";
 
 const excuse = document.querySelector("#excuse");
 window.onload = function() {
-  excuse.innerHTML = `${getValue(arr)} ${getValue(arr1)} ${getValue(arr2)}`;
+  excuse.innerHTML = `${getValue(who)} ${getValue(action)} ${getValue(
+    what
+  )} ${getValue(when)}`;
 };
 
-const arr = ["Un perro", "Un gato", "Un caballo", "Mi vecino"];
-const arr1 = ["comio", "mordio", "quemo", "llevo"];
-const arr2 = ["mi movil", "mi libro", "mi coche", "mis llaves"];
+const who = ["A dog", "A cat", "A horse", "My neighbour", "My boss"];
+const action = ["ate", "bit", "burnt", "took", "threw"];
+const what = ["my leg", "my book", "my car", "my keys", "my kids", "my money"];
+const when = [
+  "during my studies",
+  "while I was eating",
+  "when driving a car",
+  "while having a beer"
+];
 
-const getRandom = arra_y => Math.floor(Math.random() * arra_y.length);
-const getValue = arra_y => arra_y[getRandom(arra_y)];
+const getRandom = array => Math.floor(Math.random() * array.length);
+const getValue = array => array[getRandom(array)];
 
-console.log(getRandom(arr));
-console.log(getRandom(arr1));
-console.log(getRandom(arr2));
+console.log(getRandom(who));
+console.log(getRandom(action));
+console.log(getRandom(what));
+console.log(getRandom(when));
